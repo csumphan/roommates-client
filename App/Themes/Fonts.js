@@ -19,6 +19,7 @@ const size = {
 }
 
 const style = {
+  default: 'Helvetica',
   h1: {
     fontFamily: type.base,
     fontSize: size.h1
