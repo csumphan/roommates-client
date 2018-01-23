@@ -22,16 +22,22 @@ class LoginScreen extends Component {
     this.fields = {}
   }
 
-  static navigationOptions = () => {
+  static navigationOptions = ({navigation}) => {
+    const { params = {} } = navigation.state;
     const navOptions = {
-      headerStyle: styles.header
+      headerStyle: styles.header,
+      headerLeft: <Button transparent onPress={params.navigateBack}><Icon style={styles.labelText} name='close'></Icon></Button>
     }
 
     return navOptions
   }
-
   componentDidMount() {
+    this.props.navigation.setParams({navigateBack: this.navigateBack})
     this.fields['emailInput']._root.focus()
+  }
+
+  navigateBack = () => {
+    this.props.navigation.goBack()
   }
 
   handleTextChange = (text) => (name) => {

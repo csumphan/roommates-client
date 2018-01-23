@@ -34,7 +34,8 @@ export default StyleSheet.create({
   },
   slide: {
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent:'center'
   },
   slideText: {
     color: Colors.snow,

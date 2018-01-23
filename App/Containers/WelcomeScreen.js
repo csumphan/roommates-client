@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import Swiper from 'react-native-swiper'
 import Button from '../Components/Button'
 import LoginModal from '../Components/LoginModal'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
@@ -33,6 +34,9 @@ class WelcomeScreen extends Component {
     console.log('Pressed')
     this.props.navigation.navigate('LoginScreen', {})
   }
+  handleSignUp = () => {
+    this.props.navigation.navigate('SignUp', {})
+  }
   render () {
     return (
       <View style={styles.container}>
@@ -45,10 +49,15 @@ class WelcomeScreen extends Component {
             <Text style={styles.slideText}>Help manages and schedules household task</Text>
           </View>
           <View>
-            <Text>Blah</Text>
+            <View style={styles.imageContainer}>
+              <Text>
+                <Icon style={styles.icon} name="broom" size={120} color="white" />
+              </Text>
+            </View>
+            <Text style={styles.slideText}>Track daily chores and view shit about shit</Text>
           </View>
           <View>
-            <Text>HEHE</Text>
+            <Text style={styles.slideText}>Keep housemates accountable for their shit using reminders</Text>
           </View>
         </Swiper>
         <Button

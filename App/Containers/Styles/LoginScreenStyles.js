@@ -28,9 +28,18 @@ export default StyleSheet.create({
     width: Metrics.screenWidth * 0.9
 
   },
+  imageContainer: {
+    padding: 40,
+    borderStyle: 'solid',
+    borderColor: Colors.snow,
+    borderWidth: 4,
+    borderRadius: 240 * 0.5
 
+  },
   labelText: {
-    color: Colors.snow
+    color: Colors.snow,
+    fontSize: 32,
+    paddingLeft: 5
   },
   inputContainer: {
     margin: 5,
@@ -48,7 +57,7 @@ export default StyleSheet.create({
   },
   forgotPassword: {
     alignSelf: 'flex-end',
-    marginRight: 10ea
+    marginRight: 10
   },
   button: {
     overflow: 'hidden',
